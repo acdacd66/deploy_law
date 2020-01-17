@@ -13,7 +13,7 @@ SECRET_KEY = 'ck2+0dxo+g=9u-dh)(3496+r8dgj$1jq306qc5ij^ng7=&*dl4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -46,7 +46,7 @@ ROOT_URLCONF = 'law.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['law/templates'],
+        'DIRS': [os.path.join(BASE_DIR,'law/templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
